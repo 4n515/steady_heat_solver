@@ -16,11 +16,11 @@ and build a system of linear equations to solve for the stationary state.
 
 The equation as solved:
 
-$$
+$
 \frac{2}{k^{-1}_L+k^{-1}} (T_{i,j-1}-T_{i,j})+\frac{2}{k^{-1}_R+k^{-1}} (T_{i,j+1}-T_{i,j})
 +\frac{2}{k^{-1}_T+k^{-1}} (T_{i+1,j}-T_{i,j})+\frac{2}{k^{-1}_B+k^{-1}} (T_{i-1,j}-T_{i,j})
 =0
-$$
+$
 with T as temperature(kelvion or celsisus)(i=y,j=x), k as thermal conductivity of the nodes own grid cell or neighbour with: T - top, B - bottom, L - left, R - right. 
 Each of the terms describes a heat flux to a neighboring node.
 
