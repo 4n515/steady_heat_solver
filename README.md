@@ -1,10 +1,10 @@
 # Steady state heat/temperature solver in 2d
 
 <p align="center">
-  <img src="[https://github.com/4n515/steady_heat_solver/blob/main/capillary.png]"/>
+  <img src="https://raw.githubusercontent.com/4n515/steady_heat_solver/main/capillary.png" alt="Capillary Image"/>
 </p>
 
-Implementation of a specialized solver designed to find the steady-state temperature distribution in (2d rectangle) cross sections of walls with capillary heat exchangers. Capillary heat exchangers enable efficient use of heat pumps, if properly set up these systems require lower heating temperatures to achieve the required heat fluxes.
+A specialized solver designed to find the steady-state temperature distribution in (2d rectangle) cross sections of walls with capillary heat exchangers. Capillary heat exchangers enable efficient use of heat pumps, if properly set up these systems require lower heating temperatures to achieve the required heat fluxes.
 
 The solver utilizes a linear system of equations to model the temperature distribution within the wall cross section. It takes into account the geometry of the wall, including the presence of capillary heat exchangers and water regions, as well as boundary conditions such as heat flux, constant temperature or convective heat transfer.
 
@@ -25,7 +25,6 @@ Each of the terms describes a heat flux to a neighboring node.
 
 
 ### Implemented boundary conditions and "ghost cells"
-These are specific to the capillary problem i was solving.
 
 #### Bottom
 
@@ -59,4 +58,4 @@ for example `np.zeros((100*1500,100*1500))` yields:
 But its mostly zeros - a [sparse matrix](https://en.wikipedia.org/wiki/Sparse_matrix),
 so `scipy.sparse` is used.
 
-# Examples can be found in the notebook
+# Examples in the notebook
