@@ -1,9 +1,8 @@
 # Steady state heat/temperature solver in 2d
 
 <p align="center">
-  <img src="https://github.com/4n515/steady_heat_solver/capillary.png" alt="Capillary" width="1000"/>
+  <img src="[https://github.com/4n515/steady_heat_solver/blob/main/capillary.png]"/>
 </p>
-
 
 Implementation of a specialized solver designed to find the steady-state temperature distribution in (2d rectangle) cross sections of walls with capillary heat exchangers. Capillary heat exchangers enable efficient use of heat pumps, if properly set up these systems require lower heating temperatures to achieve the required heat fluxes.
 
@@ -19,7 +18,7 @@ and build a system of linear equations to solve for the stationary state.
 
 The equation as solved:
 
-![equation](https://latex.codecogs.com/png.latex?\frac{2}{k^{-1}_L+k^{-1}}%20(T_{i,j-1}-T_{i,j})+\frac{2}{k^{-1}_R+k^{-1}}%20(T_{i,j+1}-T_{i,j})+\frac{2}{k^{-1}_T+k^{-1}}%20(T_{i+1,j}-T_{i,j})+\frac{2}{k^{-1}_B+k^{-1}}%20(T_{i-1,j}-T_{i,j})=0)
+![equation](https://latex.codecogs.com/png.latex?\color{white}\frac{2}{k^{-1}_L+k^{-1}}%20(T_{i,j-1}-T_{i,j})+\frac{2}{k^{-1}_R+k^{-1}}%20(T_{i,j+1}-T_{i,j})+\frac{2}{k^{-1}_T+k^{-1}}%20(T_{i+1,j}-T_{i,j})+\frac{2}{k^{-1}_B+k^{-1}}%20(T_{i-1,j}-T_{i,j})=0)
 
 with T as temperature(kelvion or celsisus)(i=y,j=x), k as thermal conductivity of the nodes own grid cell or neighbour with: T - top, B - bottom, L - left, R - right. 
 Each of the terms describes a heat flux to a neighboring node.
